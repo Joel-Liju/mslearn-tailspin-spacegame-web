@@ -53,3 +53,4 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: run
+    projects: 'C:\agent\_work\1\s\Tailspin.SpaceGame.Web'
