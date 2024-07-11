@@ -42,3 +42,10 @@ steps:
     SourceFolder: 'C:\agent\_work\1\a'
     Contents: '**' # string. Required. Contents. Default: **.
     TargetFolder: 'C:\Users\jlijujacob\Documents\Solution\spacegame' 
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: publish
+    publishWebProjects: True
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
