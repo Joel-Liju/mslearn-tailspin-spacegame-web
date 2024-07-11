@@ -27,6 +27,11 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- task: PublishPipelineArtifact@1
+  inputs:
+    path: $(build.artifactStagingDirectory)
+    artifact: 'drop'
+    
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
