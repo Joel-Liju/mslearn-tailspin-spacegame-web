@@ -31,8 +31,9 @@ steps:
   inputs:
     path: $(build.artifactStagingDirectory)
     artifact: 'drop'
-    
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    searchFolder: '$(build.artifactStagingDirectory)'
