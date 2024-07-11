@@ -32,6 +32,12 @@ steps:
     path: $(build.artifactStagingDirectory)
     artifact: 'drop'
 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: build
+    publishWebProjects: True
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
@@ -49,8 +55,3 @@ steps:
     publishWebProjects: True
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: run
-    projects: 'C:\agent\_work\1\s\Tailspin.SpaceGame.Web'
