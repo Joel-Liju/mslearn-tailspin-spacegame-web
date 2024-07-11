@@ -20,10 +20,10 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: PublishPipelineArtifact@1
+- task: DotNetCoreCLI@2
   inputs:
-    path: $(build.artifactStagingDirectory)
-    artifact: 'drop'
+    command: 'publish'
+    zipAfterPublish: false
 
 - task: VSTest@2
   inputs:
