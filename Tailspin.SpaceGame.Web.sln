@@ -4,7 +4,7 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tailspin.SpaceGame.Web", "Tailspin.SpaceGame.Web\Tailspin.SpaceGame.Web.csproj", "{A0C4E31E-AC75-4F39-9F59-0AA19D9B8F46}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "TestProject\TestProject.csproj", "{35D138FC-A9C1-4CF1-AC94-D9F28BFB1D14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceGameTest", "TestProject\SpaceGameTest.csproj", "{35D138FC-A9C1-4CF1-AC94-D9F28BFB1D14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,5 +23,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65A6A541-D62E-46E3-A553-7144D99081D6}
 	EndGlobalSection
 EndGlobal
