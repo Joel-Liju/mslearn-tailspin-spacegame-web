@@ -31,7 +31,7 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    searchFolder: '$(build.artifactStagingDirectory)'
+    
 - task: CopyFiles@2
   inputs:
     SourceFolder: 'C:\agent\_work\1\a'
