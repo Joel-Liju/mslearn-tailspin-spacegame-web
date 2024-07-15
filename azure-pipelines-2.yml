@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
 
 trigger:
-- main
+- master-test
 
 pool: Test
 
@@ -37,8 +37,3 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: 'C:\agent\_work\1\a'
-    Contents: '**' # string. Required. Contents. Default: **.
-    TargetFolder: 'C:\inetpub\wwwroot\SpaceGame' 
